@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farsi Laban - Fresh Laban Without Compromise</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Wrapper (ADDED) -->
+    <header class="header-wrapper">
+
+        <!-- Logo OUTSIDE navbar (MOVED, NOT DELETED) -->
+        <a href="#" class="logo-container">
+            <img src="./assets/farsi logo.png" alt="Farsi Laban Logo">
+        </a>
+
+        <!-- Navigation (UNCHANGED except logo removed) -->
+        <nav class="navbar">
+            <div class="container navbar-content">
+
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#products">Our Products</a></li>
+                    <li><a href="#store">Our Store</a></li>
+                </ul>
+
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Main Content (100% UNCHANGED) -->
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Fresh Laban <br> <span class="highlight">Without Compromise</span></h1>
+                    <p class="hero-subtext">Authentic Egyptian laban, freshly made every day. Indulge in the creamy
+                        goodness topped with your favorites.</p>
+                    <a href="#products" class="btn btn-primary">Order Now</a>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image-container">
+                        <img src="./assets/farsi-hero 1.png" alt="Fresh Farsi Laban Dessert"
+                            class="main-hero-img">
+                        <div class="floating-element float-1"></div>
+                        <div class="floating-element float-2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-wave">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#ffffff" fill-opacity="1"
+                        d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320H0Z">
+                    </path>
+                </svg>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="products-header">
+      <h2>Our Products</h2>
+      <p>You are going to like our desserts for sure.</p>
+    </div>
+
+    <!-- ===== Salankatia ===== -->
+    <div class="product-section">
+  <h3 class="section-title">Salankatia</h3>
+
+  <div class="product-scroll">
+    <div class="product-card">Pistachio</div>
+    <div class="product-card">Nutella</div>
+    <div class="product-card">Lotus Biscoff</div>
+    <div class="product-card">Nutella + Lotus</div>
+    <div class="product-card">Nutella + Pistachio</div>
+    <div class="product-card">Pistachio + Lotus</div>
+  </div>
+</div>
+
+    <!-- ===== Koushri ===== -->
+  <div class="product-section">
+  <h3 class="section-title">Koushri</h3>
+
+  <div class="product-scroll">
+    <div class="product-card">Pistachio</div>
+    <div class="product-card">Nutella</div>
+    <div class="product-card">Lotus Biscoff</div>
+    <div class="product-card">Nutella + Lotus</div>
+    <div class="product-card">Nutella + Pistachio</div>
+    <div class="product-card">Pistachio + Lotus</div>
+  </div>
+</div>
+
+    <!-- ===== Lou’a ===== -->
+   <div class="product-section">
+  <h3 class="section-title">Lou'a</h3>
+
+  <div class="product-scroll">
+    <div class="product-card">Pistachio</div>
+    <div class="product-card">Nutella</div>
+    <div class="product-card">Lotus Biscoff</div>
+    <div class="product-card">Nutella + Lotus</div>
+    <div class="product-card">Nutella + Pistachio</div>
+    <div class="product-card">Pistachio + Lotus</div>
+  </div>
+</div>
+
+    <!-- ===== Miscellaneous ===== -->
+    <div class="product-section">
+      <h3 class="section-title">Miscellaneous</h3>
+
+      <div class="product-grid five-grid">
+        <div class="product-card">Milk Bottle</div>
+        <div class="product-card">Chocolate Sauce</div>
+        <div class="product-card">Pistachio Topping</div>
+        <div class="product-card">Lotus Spread</div>
+        <div class="product-card">Combo Box</div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="store-locator" class="store-locator">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="store-header">
+      <h2>Store Locator</h2>
+      <p>Find a store near you</p>
+    </div>
+
+    <!-- Layout -->
+    <div class="store-layout">
+
+      <!-- Store List -->
+      <div class="store-list">
+        <div class="store-item" data-lat="9.3833" data-lng="76.5741">Thiruvalla</div>
+        <div class="store-item" data-lat="9.4981" data-lng="76.3388">Alleppey</div>
+        <div class="store-item" data-lat="8.5241" data-lng="76.9366">Thiruvananthapuram</div>
+        <div class="store-item" data-lat="9.5916" data-lng="76.5222">Kottayam</div>
+        <div class="store-item" data-lat="9.8944" data-lng="76.7111">Thodupuzha</div>
+        <div class="store-item" data-lat="8.8932" data-lng="76.6141">Kollam</div>
+        <div class="store-item" data-lat="11.0168" data-lng="76.9558">Coimbatore</div>
+        <div class="store-item" data-lat="8.5673" data-lng="76.8774">Kazhakkoottam</div>
+        <div class="store-item" data-lat="8.2560" data-lng="77.3161">Unnamalaikadai</div>
+      </div>
+
+      <!-- Map -->
+      <div id="map" class="store-map"></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Leaflet -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    </main>
+
+       
+    <script src="script.js" defer></script>
+</body>
+
+</html>
