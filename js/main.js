@@ -8,19 +8,45 @@ import { initUser } from "./user.js";
 import { loadProducts } from "./products.js";
 import { initCart } from "./cart.js";
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* Initialize Product System */
-    loadProducts();
+    console.log("Farsi Laban Website Initialized");
 
-    /* Initialize Hero Carousel */
-    initCarousel();
+    /* ========================================
+       Initialize Product System
+    ======================================== */
 
-    /* Initialize Guest Memory */
-    initUser();
+    if (typeof loadProducts === "function") {
+        loadProducts();
+    }
 
-    /* Initialize Cart System */
-    initCart();
+
+    /* ========================================
+       Initialize Hero Carousel
+    ======================================== */
+
+    if (typeof initCarousel === "function") {
+        initCarousel();
+    }
+
+
+    /* ========================================
+       Initialize Guest Memory
+    ======================================== */
+
+    if (typeof initUser === "function") {
+        initUser();
+    }
+
+
+    /* ========================================
+       Initialize Cart System
+    ======================================== */
+
+    if (typeof initCart === "function") {
+        initCart();
+    }
 
 });
 
@@ -29,17 +55,33 @@ document.addEventListener("DOMContentLoaded", () => {
    HERO BUTTON FUNCTIONS
 ======================================== */
 
-function scrollToProducts(){
+function scrollToProducts() {
 
     const section = document.getElementById("products");
 
-    if(section){
+    if (section) {
 
         section.scrollIntoView({
-            behavior: "smooth"
+            behavior: "smooth",
+            block: "start"
         });
 
     }
+
+}
+
+
+/* ========================================
+   OPTIONAL: SCROLL TO TOP
+   (Useful later)
+======================================== */
+
+function scrollToTop() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 }
 
@@ -49,3 +91,4 @@ function scrollToProducts(){
 ======================================== */
 
 window.scrollToProducts = scrollToProducts;
+window.scrollToTop = scrollToTop;

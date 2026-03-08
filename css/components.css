@@ -130,61 +130,351 @@
     transform: translateY(-2px);
 }
 
+/* =========================================
+   CUSTOMER'S LOVE
+========================================= */
+.customer-love{
+padding:100px 8%;
+text-align:center;
+}
 
+.customer-love-header .tag{
+background:#e8f2ff;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+}
 
+.customer-love-header h2{
+font-size:36px;
+margin-top:10px;
+}
+
+.customer-love-header span{
+color:#1a73e8;
+}
+
+.customer-love-grid{
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+grid-auto-rows:220px;
+gap:20px;
+}
+
+.card{
+border-radius:18px;
+padding:20px;
+text-align:center;
+background:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.07);
+overflow:hidden;
+position:relative;
+}
+
+.card img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:18px;
+}
+
+.card.blue{
+background:#1a73e8;
+color:white;
+}
+
+.card.light{
+background:#f5f7fa;
+}
+
+.card.dark{
+background:#1f2937;
+color:white;
+}
+
+.card.large{
+grid-row:span 3;
+grid-column:span 2;
+}
+
+.card.image{
+padding:0;
+}
+.reel-card{
+    padding:0;
+    overflow:hidden;
+    position:relative;
+    grid-row:span 2;
+}
+
+.reel-card video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.review .stars{
+color:#ffc107;
+margin-bottom:8px;
+}
+
+.instagram-btn{
+margin-top:80px;
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:linear-gradient(45deg,#ff7a18,#ff3d77);
+color:white;
+cursor:pointer;
+}
 /* =========================================
    PRODUCTS
 ========================================= */
 
-.products {
-    background: #ffffff;
-    padding: 120px 10%;
-    text-align: center;
+/* ================= PRODUCTS ================= */
+
+.products{
+padding:100px 8%;
+text-align:center;
 }
 
-.products-title {
-    font-size: 42px;
-    margin-bottom: 60px;
+.products-header{
+margin-bottom:60px;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 40px;
-
-    max-width: 1200px;
-    margin: auto;
+.products-header .tag{
+background:#e8f2ff;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+display:inline-block;
+margin-bottom:12px;
 }
 
-.product-card {
-    background: #f0f7ff;
-    padding: 30px;
-    border-radius: 30px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+.products-header h2{
+font-size:36px;
+font-weight:600;
 }
 
-.product-card img {
-    width: 180px;
-    margin-bottom: 20px;
+.products-header h2 span{
+color:#2f80ed;
 }
 
-.product-price {
-    font-weight: 600;
-    color: #0077ff;
-    font-size: 18px;
+.products-header p{
+opacity:0.7;
+margin-top:10px;
+font-size:15px;
 }
 
-.add-cart-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    background: #0077ff;
-    color: white;
-    cursor: pointer;
+/* ================= FILTER BUTTONS ================= */
+
+.product-filters{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-bottom:40px;
 }
 
+.filter-btn{
+padding:10px 18px;
+border:none;
+border-radius:30px;
+background:#eef2f7;
+font-size:14px;
+cursor:pointer;
+transition:.3s;
+}
 
+.filter-btn.active{
+background:#2f80ed;
+color:white;
+box-shadow:0 6px 14px rgba(0,0,0,0.15);
+transform:scale(1.05);
+}
 
+/* ================= GRID ================= */
+.product-grid{
+display:flex;
+gap:30px;
+overflow-x:auto;
+overflow-y:hidden;
+padding-bottom:10px;
+scroll-behavior:smooth;
+}
+
+/* Hide scrollbar */
+
+.product-grid::-webkit-scrollbar{
+display:none;
+}
+
+.product-grid{
+scrollbar-width:none;
+}
+
+/* ================= PRODUCT CARD ================= */
+
+.product-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+position:relative;
+padding:20px;
+min-width:280px;
+flex-shrink:0;
+}
+
+.product-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* ================= BADGE ================= */
+
+.badge{
+position:absolute;
+top:16px;
+left:16px;
+background:#2f80ed;
+color:white;
+font-size:12px;
+padding:4px 10px;
+border-radius:20px;
+}
+
+/* ================= IMAGE ================= */
+
+.product-image{
+height:180px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f5f7fb;
+border-radius:16px;
+margin-bottom:15px;
+overflow:hidden;
+}
+
+.product-image img{
+height:140px;
+object-fit:contain;
+transition:0.4s;
+}
+
+.product-card:hover img{
+transform:scale(1.05);
+}
+
+/* ================= RATING ================= */
+
+.rating{
+display:flex;
+align-items:center;
+gap:4px;
+font-size:13px;
+color:#f5a623;
+margin-bottom:8px;
+}
+
+.rating span{
+margin-left:5px;
+color:#888;
+font-size:12px;
+}
+
+/* ================= PRODUCT INFO ================= */
+
+.product-title{
+font-size:18px;
+font-weight:600;
+margin-bottom:5px;
+}
+
+.product-desc{
+font-size:14px;
+opacity:0.7;
+margin-bottom:14px;
+}
+
+/* ================= PRODUCT FOOTER ================= */
+
+.product-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.price{
+font-weight:600;
+color:#2f80ed;
+font-size:18px;
+}
+
+/* ================= QUANTITY STEPPER ================= */
+
+.qty{
+display:flex;
+align-items:center;
+gap:6px;
+background:#eef2f7;
+padding:4px 10px;
+border-radius:12px;
+}
+
+.qty button{
+border:none;
+background:none;
+cursor:pointer;
+font-size:16px;
+width:20px;
+height:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.qty span{
+font-size:14px;
+width:20px;
+text-align:center;
+}
+
+/* ================= CART BUTTON ================= */
+
+.cart-btn{
+background:#2f80ed;
+color:white;
+border:none;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.cart-btn:hover{
+background:#1c6ed5;
+}
+
+/* ================= SPECIAL SECTION ================= */
+
+.special-section{
+margin-top:80px;
+}
+
+.special-title{
+font-size:30px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.special-title span{
+color:#2f80ed;
+}
 /* =========================================
    FOOTER
 ========================================= */
