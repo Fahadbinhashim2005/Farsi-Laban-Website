@@ -23,3 +23,29 @@ document.addEventListener("DOMContentLoaded", () => {
     initCart();
 
 });
+
+
+/* ========================================
+   HERO BUTTON FUNCTIONS
+======================================== */
+
+function scrollToProducts(){
+
+    const section = document.getElementById("products");
+
+    if(section){
+
+        section.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }
+
+}
+
+
+/* ========================================
+   MAKE FUNCTIONS GLOBAL (IMPORTANT)
+======================================== */
+
+window.scrollToProducts = scrollToProducts;

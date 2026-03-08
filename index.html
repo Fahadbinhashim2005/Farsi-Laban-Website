@@ -34,7 +34,7 @@
 
         <nav class="navbar">
           <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#story">Our Story</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#store">Our Stores</a></li>
@@ -43,10 +43,6 @@
         </nav>
 
         <div class="auth-buttons">
-          <button class="whatsapp-nav-btn" onclick="openWhatsApp('Inquiry')">
-            Chat with Us
-          </button>
-
           <button class="cart-btn" onclick="toggleCart()">
             🛒 Cart
           </button>
@@ -62,6 +58,16 @@
 
       <!-- HERO -->
       <section class="hero" id="home">
+        <!-- Floating Dessert Background -->
+<div class="dessert-bg">
+
+  <img src="assets/deco-chocolate.png" class="dessert-piece piece1">
+  <img src="assets/deco-cream-splash.png" class="dessert-piece piece2">
+  <img src="assets/deco-pistachio.png" class="dessert-piece piece3">
+  <img src="assets/deco-strawberry.png" class="dessert-piece piece4">
+  <img src="assets/deco-chocolate.png" class="dessert-piece piece5">
+
+</div>
         <div class="hero-container">
 
           <div class="hero-text">
@@ -77,10 +83,30 @@
               Experience the creamy goodness with premium toppings.
             </p>
 
-            <button class="hero-btn" onclick="openWhatsApp('General Order')">
-              Order Now
-            </button>
-          </div>
+           <div class="hero-buttons">
+                <button class="hero-btn" onclick="scrollToProducts()">
+                    Order Now <span class="arrow">➜</span>
+                </button>
+                <button class="secondary-btn" onclick="openWhatsApp('General Inquiry')">
+                    Contact Us
+                </button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <h3>50K+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="hero-stat">
+                    <h3>4.9</h3>
+                    <p>Rating</p>
+                </div>
+                <div class="hero-stat">
+                    <h3>4</h3>
+                    <p>Locations</p>
+                </div>
+            </div>
+        </div>
 
           <div class="arc-carousel">
             <div class="arc-track">
@@ -106,67 +132,93 @@
       </div>
 
       <!-- BESTSELLER -->
-      <section class="bestseller">
-        <div class="bestseller-container">
-
-          <div class="bestseller-text">
-            <h2>
-              Hey <span id="user-name">Guest</span>,<br>
-              this is our most selling item this week!
-            </h2>
-
-            <p class="bestseller-desc">
-              Crafted fresh just for you. Experience the rich creamy texture everyone loves.
-            </p>
-
-            <button class="order-btn" onclick="openWhatsApp('Pistachio Salankatia')">
-              Let's check it out
-            </button>
-          </div>
-
-          <div class="bestseller-card">
-            <div class="badge">Top Rated</div>
-
-            <img src="assets/heroproduct-3.png">
-
-            <h3>Pistachio Salankatia</h3>
-            <p class="price">₹180</p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- OUR STORY -->
-      <section class="story" id="story">
-        <div class="story-container">
-
-          <div class="story-header">
-            <h2>Our Story</h2>
-            <p class="story-tagline">
-              FARSI LABAN is here to delight your taste buds!
-            </p>
-          </div>
-
-          <div class="story-content">
-
-            <div class="story-image">
-              <img src="assets/story.jpg">
+        <section class="bestseller">
+            <div class="bestseller-container">
+                <!-- LEFT TEXT SIDE -->
+                <div class="bestseller-text">
+                    <h2>
+                        Hey <span id="user-name">Guest</span>,<br>
+                        this is our most selling item this week!
+                    </h2>
+                    <p class="bestseller-desc">
+                        Crafted fresh just for you. Experience the rich creamy texture everyone loves.
+                    </p>
+                    <button class="hero-btn" onclick="openWhatsApp('Pistachio Salankatia')">
+                        Let's check it out
+                    </button>
+                </div>
+                <!-- RIGHT CARD -->
+                <div class="bestseller-card">
+                    <!-- Product Image Area -->
+                    <div class="bestseller-image">
+                        <span class="badge">Top Rated</span>
+                        <img src="assets/heroproduct-3.png" alt="Pistachio Salankatia">
+                    </div>
+                    <!-- Product Details -->
+                    <div class="bestseller-details">
+                        <div class="rating">
+                            ⭐ ⭐ ⭐ ⭐ ⭐ <span>5</span>
+                        </div>
+                        <h3>Pistachio Salankatia</h3>
+                        <p class="bestseller-subtext">
+                            Premium pistachio-topped creamy delight
+                        </p>
+                        <div class="bestseller-bottom">
+                            <p class="price">₹180</p>
+                            <button class="add-cart-btn">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="story-text">
-              <p>At Farsi Laban, every bite is a journey through tradition and indulgence.</p>
-              <p>Rooted in time-honored Egyptian recipes and crafted with the finest ingredients.</p>
-              <p>Behind every laban dessert is our passionate team.</p>
-
-              <div class="story-footer">
-                <p>Come <span>Taste</span> the <span>Magic!</span></p>
-              </div>
+        <!-- OUR STORY -->
+        <section class="story" id="story">
+            <div class="story-container">
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="assets/story.jpg">
+                </div>
+                <div class="story-text">
+                    <div class="story-header">
+                        <h2>Our Story</h2>
+                    </div>
+                    <h3 class="story-title">
+                        <span>FARSI LABAN</span> is here to <span>delight</span> your taste <span> buds!</span>
+                    </h3>
+                    <p>At Farsi Laban, every bite is a journey through tradition and indulgence.</p>
+                    <p>Rooted in time-honored Egyptian recipes and crafted with the finest ingredients.</p>
+                    <p>Behind every laban dessert is our passionate team.</p>
+                    <div class="story-footer">
+                        <p>Come <span>Taste</span> the <span>Magic!</span></p>
+                    </div>
+                    <div class="story-stats">
+                        <div class="stat-card">
+                            <h3>2020</h3>
+                            <p>Founded</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>100%</h3>
+                            <p>Fresh Daily</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>15+</h3>
+                            <p>Varieties</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            </div>
+        </section>
 
-          </div>
-
-        </div>
-      </section>
+        <!--CUSTOMER'S LOVE-->
+        <section class="customer-love">
+            <div class="section-header">
+                
+            </div>
+        </section>
 
       <!-- PRODUCTS -->
       <section class="products" id="products">
