@@ -1,3 +1,160 @@
+/* ================= SPLASH SCREEN ================= */
+
+#farsi-splash{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#ffffff;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+overflow:hidden;
+transition:opacity .6s ease, transform .6s ease;
+}
+
+/* Pulse Rings */
+
+.pulse-ring{
+position:absolute;
+width:160px;
+height:160px;
+border-radius:50%;
+border:2px solid rgba(0,170,255,.2);
+animation:pulseRing 2s infinite;
+}
+
+.ring2{animation-delay:.4s}
+.ring3{animation-delay:.8s}
+
+@keyframes pulseRing{
+0%{transform:scale(.5);opacity:.4}
+100%{transform:scale(2.5);opacity:0}
+}
+
+/* Floating blobs */
+
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(60px);
+opacity:.4;
+}
+
+.blob1{
+width:200px;
+height:200px;
+background:#00aaff22;
+top:20%;
+left:20%;
+animation:float1 6s infinite;
+}
+
+.blob2{
+width:250px;
+height:250px;
+background:#ff7f5022;
+bottom:20%;
+right:20%;
+animation:float2 7s infinite;
+}
+
+@keyframes float1{
+0%,100%{transform:translate(0,0)}
+50%{transform:translate(40px,-30px)}
+}
+
+@keyframes float2{
+0%,100%{transform:translate(0,0)}
+50%{transform:translate(-40px,30px)}
+}
+
+/* Logo */
+
+.splash-logo{
+position:relative;
+margin-bottom:20px;
+}
+
+.splash-logo img{
+width:110px;
+height:110px;
+object-fit:contain;
+z-index:2;
+position:relative;
+}
+
+.logo-ring{
+position:absolute;
+top:-15px;
+left:-15px;
+width:140px;
+height:140px;
+border-radius:50%;
+border:2px dashed rgba(0,170,255,.3);
+animation:spin 10s linear infinite;
+}
+
+@keyframes spin{
+from{transform:rotate(0)}
+to{transform:rotate(360deg)}
+}
+
+/* Brand text */
+
+.brand-text{
+text-align:center;
+opacity:0;
+transform:translateY(20px);
+transition:.6s;
+}
+
+.brand-text.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.brand-text h1{
+font-size:40px;
+font-weight:700;
+}
+
+.brand-text span{
+color:#00aaff;
+}
+
+.brand-text p{
+font-size:12px;
+letter-spacing:3px;
+margin-top:6px;
+color:#777;
+text-transform:uppercase;
+}
+
+/* Loading bar */
+
+.loading-bar{
+width:200px;
+height:4px;
+background:#eee;
+border-radius:4px;
+overflow:hidden;
+margin-top:25px;
+}
+
+.loading-progress{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#00aaff,#ff7f50);
+animation:loading 2.5s forwards;
+}
+
+@keyframes loading{
+to{width:100%}
+}
 /* =========================================
    HERO ARC CAROUSEL
 ========================================= */
@@ -230,3 +387,42 @@
     }
 
 }
+/* =========================================
+   DESSERT FLOATING BACKGROUND - V3
+========================================= */
+.floating-decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0; 
+    overflow: hidden;
+}
+
+.deco-item {
+    position: absolute;
+    user-select: none;
+    will-change: transform;
+    z-index: 0;
+    animation: premiumFloat var(--duration, 6s) ease-in-out infinite var(--delay, 0s);
+}
+
+@keyframes premiumFloat {
+    0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+    50% { transform: translateY(-35px) rotate(calc(var(--rot, 0deg) - 10deg)); }
+}
+
+/* Shuffled Coordinates & Depths */
+.pos-upper-left       { top: 12%;  left: 4%;   width: 100px; opacity: 0.45; --rot: -12deg; --duration: 8s;   --delay: -1s; }
+.pos-top-mid          { top: 3%;   left: 55%;  width: 75px;  opacity: 0.35; --rot: 20deg;  --duration: 6s;   --delay: -3s; }
+.pos-upper-right      { top: 18%;  right: 6%;  width: 110px; opacity: 0.50; --rot: 40deg;  --duration: 9.5s; --delay: -5s; }
+.pos-center-left      { top: 45%;  left: 2%;   width: 90px;  opacity: 0.30; --rot: 15deg;  --duration: 7s;   --delay: 0s; }
+.pos-mid-center       { top: 52%;  right: 40%; width: 65px;  opacity: 0.25; --rot: -25deg; --duration: 11s;  --delay: -7s; }
+.pos-lower-right      { bottom: 25%; right: 4%; width: 130px; opacity: 0.40; --rot: 8deg;   --duration: 10s;  --delay: -2.5s; }
+.pos-near-bottom-left { bottom: 15%; left: 8%;  width: 85px;  opacity: 0.45; --rot: -30deg; --duration: 6.5s; --delay: -4s; }
+.pos-deep-bottom-right{ bottom: 5%;  right: 18%; width: 95px;  opacity: 0.35; --rot: 12deg;  --duration: 8.5s; --delay: -1.5s; }
+
+/* Waves */
+.deco-wave { position: absolute; width: 100%; left: 0; bottom: 0; height: 110px; opacity: 0.04; }

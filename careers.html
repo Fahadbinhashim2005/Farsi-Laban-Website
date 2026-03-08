@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Vacancy | Farsi Laban Careers</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/franchise.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="franchise-page"> <header class="franchise-header">
+        <div class="header-container">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <div class="header-title-row">
+                <img src="assets/farsi logo.png" alt="Farsi Laban" class="header-logo">
+                <h1>Job Vacancy</h1>
+            </div>
+            <p class="header-subtitle">
+                We're always looking for passionate people to join our team. Choose your preferred store and apply today!
+            </p>
+        </div>
+    </header>
+
+    <main class="form-wrapper">
+        <form id="careersForm" class="enquiry-form">
+            <div class="form-grid">
+                <div class="input-group">
+                    <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email *</label>
+                    <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Phone *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                </div>
+                <div class="input-group">
+                    <label for="position"><i class="fas fa-briefcase"></i> Position *</label>
+                    <select id="position" name="position" required>
+                        <option value="">Select position</option>
+                        <option value="Store Manager">Store Manager</option>
+                        <option value="Assistant Manager">Assistant Manager</option>
+                        <option value="Kitchen Staff">Kitchen Staff</option>
+                        <option value="Counter Staff">Counter Staff</option>
+                        <option value="Delivery Executive">Delivery Executive</option>
+                        <option value="Quality Supervisor">Quality Supervisor</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="preferredStore"><i class="fas fa-map-marker-alt"></i> Preferred Store</label>
+                    <select id="preferredStore" name="preferredStore">
+                        <option value="">Any store</option>
+                        <option value="kothamangalam">Kothamangalam</option>
+                        <option value="kochi">Kochi</option>
+                        <option value="kottayam">Kottayam</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="experience"><i class="fas fa-history"></i> Years of Experience</label>
+                    <select id="experience" name="experience">
+                        <option value="">Select</option>
+                        <option value="fresher">Fresher</option>
+                        <option value="1-2">1 - 2 years</option>
+                        <option value="3-5">3 - 5 years</option>
+                        <option value="5+">5+ years</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group full-width">
+                <label for="message">Why do you want to join Farsi Laban?</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about yourself and why you'd be a great fit..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <i class="fas fa-paper-plane"></i> Submit Application
+            </button>
+        </form>
+    </main>
+
+    <script src="js/careers.js"></script>
+</body>
+</html>

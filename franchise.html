@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise Enquiry | Farsi Laban</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/franchise.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="franchise-page">
+
+    <header class="franchise-header">
+        <div class="header-container">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <div class="header-title-row">
+                <img src="assets/farsi logo.png" alt="Farsi Laban" class="header-logo">
+                <h1>Franchise Enquiry</h1>
+            </div>
+            <p class="header-subtitle">
+                Join the Farsi Laban family! Fill out this form and our team will get in touch with you about franchise opportunities.
+            </p>
+        </div>
+    </header>
+
+    <main class="form-wrapper">
+        <form id="franchiseForm" class="enquiry-form">
+            <div class="form-grid">
+                <div class="input-group">
+                    <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email *</label>
+                    <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Phone *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                </div>
+                <div class="input-group">
+                    <label for="city"><i class="fas fa-map-marker-alt"></i> City *</label>
+                    <input type="text" id="city" name="city" placeholder="Your city" required>
+                </div>
+                <div class="input-group">
+                    <label for="preferredStore"><i class="fas fa-building"></i> Preferred Store Location</label>
+                    <select id="preferredStore" name="preferredStore">
+                        <option value="">Select a store</option>
+                        <option value="kothamangalam">Kothamangalam</option>
+                        <option value="kochi">Kochi</option>
+                        <option value="new">New Location</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="investment"><i class="fas fa-wallet"></i> Investment Budget</label>
+                    <select id="investment" name="investment">
+                        <option value="">Select budget range</option>
+                        <option value="5-10">₹5 - 10 Lakhs</option>
+                        <option value="10-25">₹10 - 25 Lakhs</option>
+                        <option value="25-50">₹25 - 50 Lakhs</option>
+                        <option value="50+">₹50 Lakhs+</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group full-width">
+                <label for="experience">Prior F&B Experience</label>
+                <input type="text" id="experience" name="experience" placeholder="Brief description of your experience (if any)">
+            </div>
+
+            <div class="input-group full-width">
+                <label for="message">Additional Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us why you'd like to partner with Farsi Laban..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <i class="fas fa-paper-plane"></i> Submit Franchise Enquiry
+            </button>
+        </form>
+    </main>
+
+    <script src="js/franchise.js"></script>
+</body>
+</html>

@@ -17,13 +17,17 @@ body {
     overflow-x: hidden;
 }
 
-section {
-    padding: 80px 10%;
+body.loading {
+    overflow: hidden;
 }
 
-h1,
-h2,
-h3 {
+section {
+    padding: 80px 10%;
+    position: relative; /* Necessary for z-index to take effect */
+    z-index: 2;         /* Standardized: Brings sections above the floating bg */
+}
+
+h1, h2, h3 {
     font-weight: 600;
 }
 
@@ -31,8 +35,6 @@ h3 {
     max-width: 1200px;
     margin: auto;
 }
-
-
 
 /* =========================================
    HERO SECTION
@@ -45,25 +47,23 @@ h3 {
     display: flex;
     align-items: center;
     position: relative;
+    z-index: 2; /* Keeps hero above floating bg */
 }
 
 .hero-container {
     max-width: 1200px;
     position: relative;
-    z-index: 2;
-
+    z-index: 3; /* Slightly higher than section base */
     margin: auto;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 60px;
 }
 
 .hero-text {
     max-width: 520px;
-    margin-top: -130px;
+    margin-top: -100px;
 }
 
 .hero-text h1 {
@@ -87,8 +87,6 @@ h3 {
     margin-top: 25px;
 }
 
-
-
 /* =========================================
    HERO TAG
 ========================================= */
@@ -97,21 +95,14 @@ h3 {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-
     padding: 8px 18px;
-
     font-size: 14px;
     font-weight: 500;
-
     color: #0b66ff;
     background: rgba(11, 102, 255, 0.08);
-
     border-radius: 999px;
-
     margin-bottom: 18px;
-
     box-shadow: 0 4px 14px rgba(11, 102, 255, 0.15);
-
     transition: all .3s ease;
 }
 
@@ -137,59 +128,80 @@ h3 {
    HERO STATS
 ========================================= */
 
-.hero-stats{
-display:flex;
-align-items:center;
-gap:50px;
-margin-top:10px;
-margin-left: 5px;
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
-.hero-stat h3{
-
-font-size:20px;
-font-weight:700;
-color:#1a1a1a;
-
+.hero-stat h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
 }
 
-.hero-stat p{
-font-size:14px;
-color:#777;
-margin-top:2px;
+.hero-stat p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 2px;
 }
 
+/* =========================================
+   UNIFIED GRADIENT TRANSITION
+========================================= */
+
+.unified-bg-wrapper {
+    position: relative;
+    z-index: 1;
+    /* Gradient spreads 50:50 over BOTH sections: starts White at Bestseller and ends Blue at Story */
+    background: linear-gradient(
+        180deg, 
+        #ffffff 0%, 
+        #cfeaff 50%, 
+        #9fd6ff 100% 
+    );
+}
 
 /* =========================================
    BEST SELLER SECTION
 ========================================= */
+
 .bestseller {
-    background: #ffffff;
+    background: transparent !important; /* Removed solid bg to show unified gradient */
     padding: 120px 10%;
-    z-index: 2;
+    z-index: 2; 
 }
+
 .bestseller-container {
     max-width: 1200px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     gap: 80px;
+    z-index: 3; 
 }
+
 #user-name {
     color: #0077ff;
     font-weight: 600;
 }
+
 .bestseller-text h2 {
     font-size: 42px;
     margin-bottom: 20px;
 }
+
 .bestseller-desc {
     color: #555;
     max-width: 400px;
     margin-bottom: 30px;
     line-height: 1.6;
 }
+
 .bestseller-card {
     width: 420px;
     background: white;
@@ -197,10 +209,13 @@ margin-top:2px;
     padding: 20px;
     box-shadow: 0 25px 60px rgba(0,0,0,0.08);
     transition: 0.3s;
+    z-index: 2;
 }
+
 .bestseller-card:hover {
     transform: translateY(-6px);
 }
+
 .bestseller-image {
     background: #f5f7fb;
     border-radius: 20px;
@@ -208,10 +223,14 @@ margin-top:2px;
     text-align: center;
     position: relative;
     margin-bottom: 20px;
+    z-index: 2;
 }
+
 .bestseller-image img {
     width: 200px;
+    z-index: 2;
 }
+
 .badge {
     position: absolute;
     top: 15px;
@@ -221,26 +240,32 @@ margin-top:2px;
     padding: 6px 14px;
     font-size: 12px;
     border-radius: 20px;
+    z-index: 3;
 }
+
 .rating {
     color: #f59e0b;
     font-size: 14px;
     margin-bottom: 8px;
 }
+
 .bestseller-details h3 {
     font-size: 24px;
     margin-bottom: 6px;
 }
+
 .bestseller-subtext {
     color: #777;
     font-size: 14px;
     margin-bottom: 16px;
 }
+
 .bestseller-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .price {
     font-size: 28px;
     font-weight: 700;
@@ -251,29 +276,32 @@ margin-top:2px;
 ========================================= */
 
 .story {
-    background: #f6fbff;
+    background: transparent !important; /* Removed individual bg to show unified gradient */
     padding: 100px 10%;
+    z-index: 2;
 }
 
 .story-container {
     max-width: 1200px;
     margin: auto;
+    z-index: 3; 
 }
 
 .story-header {   
-    display:inline-flex;
-    align-items:center;
-    padding:8px 15px;
-    font-size:10px;
-    font-weight:500;
-    color:#0077ff;
-    background:rgba(0,119,255,0.12);
-    border-radius:999px;
-    margin-bottom:20px;
-    box-shadow:0 4px 14px rgba(0,119,255,0.15);
-    transition:all .3s ease;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #0077ff;
+    background: rgba(0, 119, 255, 0.12);
+    border-radius: 999px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 14px rgba(0, 119, 255, 0.15);
+    transition: all .3s ease;
     width: fit-content;
 }
+
 .story-content {
     display: flex;
     align-items: center;
@@ -285,51 +313,62 @@ margin-top:2px;
     flex: 1;
     display: flex;
     justify-content: flex-start;
+    z-index: 3;
 }
+
 .story-image img {
     width: 100%;
     max-width: 520px;
     border-radius: 40px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
+
 .story-text {
     flex: 1;
     max-width: 520px;
     display: flex;
     flex-direction: column;
 }
-.story-title{
-    font-size:24px;
-    margin-bottom:5px;
-    line-height:1.2;
+
+.story-title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    line-height: 1.2;
 }
-.story-title span{
-    color:#0077ff;
+
+.story-title span {
+    color: #0077ff;
 }
+
 .story-text p {
     font-size: 16px;
     line-height: 1.8;
     color: #444;
     text-align: justify;
 }
-.story-stats{
-    display:flex;
-    gap:20px;
+
+.story-stats {
+    display: flex;
+    gap: 20px;
 }
-.stat-card{
-    background:white;
-    padding:10px 20px;
-    border-radius:16px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.05);
-    text-align:center;
+
+.stat-card {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
 }
-.stat-card h3{
-    font-size:24px;
+
+.stat-card h3 {
+    font-size: 24px;
 }
-.stat-card p{
-    font-size:14px;
-    color:#666;
+
+.stat-card p {
+    font-size: 14px;
+    color: #666;
 }
+
 .story-footer {
     text-align: right;
 }
@@ -342,4 +381,122 @@ margin-top:2px;
 .story-footer span {
     color: #0077ff;
 }
+/* =========================================
+   FULL HORIZONTAL RIBBON FOOTER
+========================================= */
 
+.modern-footer {
+    position: relative;
+    margin-top: 40px;
+}
+
+.white-curve {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #f6fbff; /* Matches your body bg */
+    border-radius:  2.5rem 2.5rem 0 0;
+    z-index: 1;
+}
+
+.blue-layer-content {
+    position: relative;
+    margin-top: -32px;
+    background-color: #0099ff; /* Your brand blue */
+    padding-top: 25px;
+    border-radius: 2.5rem 2.5rem 0 0;
+    z-index: 2;
+    color: #ffffff;
+}
+
+/* THE HORIZONTAL ROW */
+.footer-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 40px;
+    display: flex;
+    flex-direction: row;      /* Force horizontal layout */
+    align-items: center;      /* Vertically center all items in the row */
+    justify-content: space-between; /* Space out Logo, Links, and Socials */
+    gap: 20px;
+}
+
+.footer-logo {
+    width: 75px;
+    height: auto;
+}
+
+/* HORIZONTAL NAVIGATION */
+.footer-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;      /* Force links to stay horizontal */
+    gap: 40px;                /* Consistent spacing between links */
+}
+
+.footer-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;      /* Prevent links from wrapping to a new line */
+    transition: opacity 0.3s;
+}
+
+.footer-list a:hover {
+    opacity: 0.7;
+}
+
+/* HORIZONTAL SOCIALS */
+.footer-social-row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: #ffffff;
+    color: #0099ff;
+    transform: translateY(-3px);
+}
+
+/* CENTERED COPYRIGHT BAR */
+.footer-copyright-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright-inner {
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.03em;
+}
+
+/* Mobile Fix: Stack only on very small screens */
+@media (max-width: 850px) {
+    .footer-grid-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
