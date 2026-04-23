@@ -7,31 +7,31 @@ export function loadProducts() {
     ];
 
     const products = [
-        { id: 1, category: "salankatia", name: "Classic Salankatia", price: 249, image: "assets/products/salankatia1.png", description: "Traditional creamy salankatia", badge: "Best Seller" },
-        { id: 2, category: "salankatia", name: "Pistachio Salankatia", price: 279, image: "assets/products/salankatia2.png", description: "Premium pistachio topping" },
-        { id: 3, category: "salankatia", name: "Nutella Salankatia", price: 269, image: "assets/products/salankatia3.png", description: "Chocolate hazelnut swirl" },
-        { id: 4, category: "salankatia", name: "Classic Salankatia", price: 249, image: "assets/products/salankatia1.png", description: "Traditional creamy salankatia", badge: "Best Seller" },
-        { id: 5, category: "salankatia", name: "Pistachio Salankatia", price: 279, image: "assets/products/salankatia2.png", description: "Premium pistachio pistachio topping" },
-        { id: 6, category: "salankatia", name: "Nutella Salankatia", price: 269, image: "assets/products/salankatia3.png", description: "Chocolate hazelnut swirl" },
+        { id: 1, category: "salankatia", name: "Classic Salankatia", price: 350, image: "assets/products/lotussalankatia.png", description: "Traditional creamy salankatia", badge: "Best Seller" },
+        { id: 2, category: "salankatia", name: "Pistachio Salankatia", price: 350, image: "assets/products/salankatia2.png", description: "Premium pistachio topping" },
+        { id: 3, category: "salankatia", name: "Nutella Salankatia", price: 350, image: "assets/products/salankatia3.png", description: "Chocolate hazelnut swirl" },
+        { id: 4, category: "salankatia", name: "Classic Salankatia", price: 350, image: "assets/products/salankatia1.png", description: "Traditional creamy salankatia", badge: "Best Seller" },
+        { id: 5, category: "salankatia", name: "Pistachio Salankatia", price: 350, image: "assets/products/salankatia2.png", description: "Premium pistachio pistachio topping" },
+        { id: 6, category: "salankatia", name: "Nutella Salankatia", price: 350, image: "assets/products/salankatia3.png", description: "Chocolate hazelnut swirl" },
 
-        { id: 7, category: "loua", name: "Classic Lou'a", price: 199, image: "assets/products/loua1.png", description: "Traditional Egyptian dessert", badge: "Best Seller" },
-        { id: 8, category: "loua", name: "Mango Lou'a", price: 219, image: "assets/products/loua2.png", description: "Fresh mango flavor" },
-        { id: 9, category: "loua", name: "Vanilla Lou'a", price: 209, image: "assets/products/loua3.png", description: "Classic vanilla taste" },
-        { id: 10, category: "loua", name: "Chocolate Lou'a", price: 229, image: "assets/products/loua4.png", description: "Rich chocolate flavor" },
-        { id: 11, category: "loua", name: "Strawberry Lou'a", price: 219, image: "assets/products/loua5.png", description: "Fresh strawberry swirl" },
-        { id: 12, category: "loua", name: "Pistachio Lou'a", price: 239, image: "assets/products/loua6.png", description: "Premium pistachio topping" },
+        { id: 7, category: "loua", name: "Classic Lou'a", price: 350, image: "assets/products/loua1.png", description: "Traditional Egyptian dessert", badge: "Best Seller" },
+        { id: 8, category: "loua", name: "Mango Lou'a", price: 350, image: "assets/products/loua2.png", description: "Fresh mango flavor" },
+        { id: 9, category: "loua", name: "Vanilla Lou'a", price: 350, image: "assets/products/loua3.png", description: "Classic vanilla taste" },
+        { id: 10, category: "loua", name: "Chocolate Lou'a", price: 350, image: "assets/products/loua4.png", description: "Rich chocolate flavor" },
+        { id: 11, category: "loua", name: "Strawberry Lou'a", price: 350, image: "assets/products/loua5.png", description: "Fresh strawberry swirl" },
+        { id: 12, category: "loua", name: "Pistachio Lou'a", price: 350, image: "assets/products/loua6.png", description: "Premium pistachio topping" },
 
-        { id: 13, category: "koushri", name: "Classic Koushri", price: 229, image: "assets/products/koushri1.png", description: "Traditional layered dessert", badge: "Best Seller" },
-        { id: 14, category: "koushri", name: "Mango Koushri", price: 249, image: "assets/products/koushri2.png", description: "Fresh mango flavor" },
-        { id: 15, category: "koushri", name: "Vanilla Koushri", price: 239, image: "assets/products/koushri3.png", description: "Classic vanilla taste" },
-        { id: 16, category: "koushri", name: "Chocolate Koushri", price: 259, image: "assets/products/koushri4.png", description: "Rich chocolate flavor" },
-        { id: 17, category: "koushri", name: "Strawberry Koushri", price: 249, image: "assets/products/koushri5.png", description: "Fresh strawberry swirl" },
-        { id: 18, category: "koushri", name: "Pistachio Koushri", price: 269, image: "assets/products/koushri6.png", description: "Premium pistachio topping" }
+        { id: 13, category: "koushri", name: "Classic Koushri", price: 350, image: "assets/products/koushri1.png", description: "Traditional layered dessert", badge: "Best Seller" },
+        { id: 14, category: "koushri", name: "Mango Koushri", price: 350, image: "assets/products/koushri2.png", description: "Fresh mango flavor" },
+        { id: 15, category: "koushri", name: "Vanilla Koushri", price: 350, image: "assets/products/koushri3.png", description: "Classic vanilla taste" },
+        { id: 16, category: "koushri", name: "Chocolate Koushri", price: 350, image: "assets/products/koushri4.png", description: "Rich chocolate flavor" },
+        { id: 17, category: "koushri", name: "Strawberry Koushri", price: 350, image: "assets/products/koushri5.png", description: "Fresh strawberry swirl" },
+        { id: 18, category: "koushri", name: "Pistachio Koushri", price: 350, image: "assets/products/koushri6.png", description: "Premium pistachio topping" }
     ];
 
     const specials = [
         { name: "Heba Cake", price: 349, image: "assets/products/special1.png", description: "Premium royal dessert" },
-        { name: "Fazea Choco Cake", price: 359, image: "assets/products/special2.png", description: "Lotus cream masterpiece" },
+        { name: "Fazea Choco Cake", price: 359, image: "assets/products/fazeachocolacake.png", description: "Lotus cream masterpiece" },
         { name: "DE Paris", price: 349, image: "assets/products/special1.png", description: "Premium royal dessert" },
         { name: "Kabsa", price: 359, image: "assets/products/special2.png", description: "Lotus cream masterpiece" },
         { name: "Cheese Bomb", price: 349, image: "assets/products/special1.png", description: "Premium royal dessert" }
@@ -192,36 +192,38 @@ export function loadProducts() {
         });
     }
 
-    /* ================= SPECIAL PRODUCTS ================= */
+   /* ================= SPECIAL PRODUCTS (FIXED STRUCTURE) ================= */
 
-    function renderSpecials() {
-        specialGrid.innerHTML = "";
+function renderSpecials() {
+    specialGrid.innerHTML = "";
 
-        specials.forEach(p => {
-            const card = document.createElement("div");
-            card.className = "product-card";
+    specials.forEach(p => {
+        const card = document.createElement("div");
+        card.className = "product-card";
 
-            card.innerHTML = `
-                <div class="product-image">
-                    <img src="${p.image}">
+        // This structure now matches your "SPECIAL SECTION" CSS perfectly
+        card.innerHTML = `
+            <div class="product-image">
+                <img src="${p.image}" alt="${p.name}">
+            </div>
+            <div class="product-info-column">
+                <div class="special-text-top">
+                    <div class="product-title">${p.name}</div>
+                    <div class="product-desc">${p.description}</div>
                 </div>
-                <div class="product-title">${p.name}</div>
-                
-                <div class="product-desc">${p.description}</div>
-                
-                <div class="product-footer">
+                <div class="special-action-row">
                     <span class="price">₹${p.price}</span>
                     <button class="order-btn">Order Now</button>
                 </div>
-            `;
+            </div>
+        `;
 
-            specialGrid.appendChild(card);
+        specialGrid.appendChild(card);
 
-            // Attach modal trigger
-            card.querySelector(".order-btn").addEventListener("click", openDeliveryModal);
-        });
-    }
-
+        // Attach modal trigger
+        card.querySelector(".order-btn").addEventListener("click", openDeliveryModal);
+    });
+}
     /* ================= HORIZONTAL SCROLL ================= */
 
     function enableHorizontalScroll() {
