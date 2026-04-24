@@ -8,8 +8,8 @@ export function loadProducts() {
 
     const products = [
         { id: 1, category: "salankatia", name: "Classic Salankatia", price: 350, image: "assets/products/lotussalankatia.png", description: "Traditional creamy salankatia", badge: "Best Seller" },
-        { id: 2, category: "salankatia", name: "Pistachio Salankatia", price: 350, image: "assets/products/salankatia2.png", description: "Premium pistachio topping" },
-        { id: 3, category: "salankatia", name: "Nutella Salankatia", price: 350, image: "assets/products/salankatia3.png", description: "Chocolate hazelnut swirl" },
+        { id: 2, category: "salankatia", name: "Pistachio Salankatia", price: 350, image: "assets/products/pistachiosalankatia2.png", description: "Premium pistachio topping" },
+        { id: 3, category: "salankatia", name: "Nutella Salankatia", price: 350, image: "assets/products/nutellasalankatia3.png", description: "Chocolate hazelnut swirl" },
         { id: 4, category: "salankatia", name: "Classic Salankatia", price: 350, image: "assets/products/salankatia1.png", description: "Traditional creamy salankatia", badge: "Best Seller" },
         { id: 5, category: "salankatia", name: "Pistachio Salankatia", price: 350, image: "assets/products/salankatia2.png", description: "Premium pistachio pistachio topping" },
         { id: 6, category: "salankatia", name: "Nutella Salankatia", price: 350, image: "assets/products/salankatia3.png", description: "Chocolate hazelnut swirl" },
