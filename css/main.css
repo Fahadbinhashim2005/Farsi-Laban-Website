@@ -169,7 +169,7 @@ h1, h2, h3 {
 ========================================= */
 
 .bestseller {
-    background: transparent !important; /* Removed solid bg to show unified gradient */
+    background: transparent !important;
     padding: 120px 10%;
     z-index: 2; 
 }
@@ -202,6 +202,8 @@ h1, h2, h3 {
     line-height: 1.6;
 }
 
+/* ================= CARD ================= */
+
 .bestseller-card {
     width: 420px;
     background: white;
@@ -216,20 +218,30 @@ h1, h2, h3 {
     transform: translateY(-6px);
 }
 
+/* ================= IMAGE AREA ================= */
+
 .bestseller-image {
     background: #f5f7fb;
     border-radius: 20px;
-    padding: 40px;
-    text-align: center;
     position: relative;
     margin-bottom: 20px;
     z-index: 2;
+
+    height: 220px;         /* 🔥 fixed height */
+    overflow: hidden;      /* 🔥 crop overflow */
+    padding: 0;            /* 🔥 removed extra padding */
 }
 
+/* IMAGE FIX */
+
 .bestseller-image img {
-    width: 200px;
-    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* 🔥 fills perfectly */
+    display: block;
 }
+
+/* BADGE */
 
 .badge {
     position: absolute;
@@ -242,6 +254,8 @@ h1, h2, h3 {
     border-radius: 20px;
     z-index: 3;
 }
+
+/* ================= TEXT ================= */
 
 .rating {
     color: #f59e0b;
@@ -260,6 +274,8 @@ h1, h2, h3 {
     margin-bottom: 16px;
 }
 
+/* ================= BOTTOM ================= */
+
 .bestseller-bottom {
     display: flex;
     align-items: center;
@@ -270,7 +286,6 @@ h1, h2, h3 {
     font-size: 28px;
     font-weight: 700;
 }
-
 /* =========================================
    OUR STORY
 ========================================= */

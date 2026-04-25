@@ -32,11 +32,11 @@ const products = [
         { id: 18, category: "koushri", name: "Nutella + Lotus Koushri", price: 350, image: "assets/products/nutellalotuskoushri.png", description: "Double indulgence with rich Nutella <br> chocolate and sweet Lotus spread" }
     ];
     const specials = [
-    { name: "Heba Cake", price: 349, image: "assets/products/hebacake.png", description: "Soft chocolate layers with creamy<br>texture, pistachio crumbs and drizzle<br>Perfectly balanced dessert" },
-    { name: "Fazea Choco Cake", price: 359, image: "assets/products/fazeachocolacake.png", description: "Rich chocolate cake with smooth<br>ganache and crunchy hazelnuts<br>Deep cocoa indulgence" },
-    { name: "DE Paris", price: 349, image: "assets/products/deparis.png", description: "Creamy layered dessert with rich<br>mango, strawberry and mulberry<br>Refreshing luxury treat" },
-    { name: "Kabsa", price: 359, image: "assets/products/kabsa.png", description: "Chocolate loaded dessert with soft<br>cake bites and choco chunks<br>Crunchy and rich in every bite" },
-    { name: "Cheese Bomb", price: 349, image: "assets/products/cheesebomb.png", description: "Crispy kunafa filled with melted<br>cheese and rich chocolate drizzle<br>Warm and gooey delight" }
+    { name: "Heba Cake", price: 350, image: "assets/products/hebacake.png", description: "Soft chocolate layers with creamy<br>texture, pistachio crumbs and drizzle<br>Perfectly balanced dessert" },
+    { name: "Fazea Choco Cake", price: 490, image: "assets/products/fazeachocolacake.png", description: "Rich chocolate cake with smooth<br>ganache and crunchy hazelnuts<br>Deep cocoa indulgence" },
+    { name: "DE Paris", price: 490, image: "assets/products/deparis.png", description: "Creamy layered dessert with rich<br>mango, strawberry and mulberry<br>Refreshing luxury treat" },
+    { name: "Kabsa", price: 350, image: "assets/products/kabsa.png", description: "Chocolate loaded dessert with soft<br>cake bites and choco chunks<br>Crunchy and rich in every bite" },
+    { name: "Cheese Bomb", price: 290, image: "assets/products/cheesebomb.png", description: "Crispy kunafa filled with melted<br>cheese and rich chocolate drizzle<br>Warm and gooey delight" }
 ];
     const grid = document.getElementById("product-grid");
     const specialGrid = document.getElementById("special-grid");
