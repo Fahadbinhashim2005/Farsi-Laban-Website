@@ -8,10 +8,9 @@
 
 /* Header with Curve */
 .franchise-header {
-    background-color: #0099ff; /* Matches Farsi Laban Blue */
+    background-color: #0099ff;
     color: white;
-    margin-top: -180px;
-    padding: 80px 20px 100px;
+    padding: 120px 20px 100px;
     border-radius: 0 0 2.5rem 2.5rem;
     text-align: center;
 }

@@ -15,6 +15,20 @@
 </head>
 
 <body>
+<svg style="width: 0; height: 0; position: absolute;" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="archClip" clipPathUnits="objectBoundingBox">
+      <path d="M 0.5,0.1
+               C 0.85,0.1 0.80,0.25 0.8,0.25 
+               C 0.95,0.3 0.95,0.45 0.95,0.5 
+               L 0.93,1
+               L 0.05,1 
+               L 0.05,0.5 
+               C 0.05,0.45 0.05,0.3 0.2,0.25 
+               C 0.3,0.2 0.45,0.1 0.5,0 Z" />
+    </clipPath>
+  </defs>
+</svg>
     <div id="farsi-splash">
         <div class="pulse-ring ring1"></div>
         <div class="pulse-ring ring2"></div>
@@ -84,7 +98,7 @@
 
                     <div class="hero-buttons">
                         <button class="hero-btn" onclick="scrollToProducts()">Order Now <span class="arrow">➜</span></button>
-                        <button class="secondary-btn" onclick="openWhatsApp('General Inquiry')">Contact Us</button>
+                        <button class="contact-btn" onclick="openWhatsApp('General Inquiry')">Contact Us</button>
                     </div>
 
                     <div class="hero-stats">
@@ -93,23 +107,26 @@
                         <div class="hero-stat"><h3>15</h3><p>Locations</p></div>
                     </div>
                 </div>
-
                 <div class="arc-carousel">
-                    <div class="arc-track">
-                        <img src="assets/heroproduct-1.png" class="arc-item pos1" alt="Hero Product 1">
-                        <img src="assets/heroproduct-2.png" class="arc-item pos2" alt="Hero Product 2">
-                        <img src="assets/heroproduct-3.png" class="arc-item pos3" alt="Hero Product 1">
-                        <img src="assets/heroproduct-2.png" class="arc-item pos4" alt="Hero Product 2">
-                        <img src="assets/heroproduct-5.png" class="arc-item pos5" alt="Hero Product 1">
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <div class="hero-wave">
-            <svg viewBox="0 0 1440 320"><path fill="#ffffff" d="M0,224L60,213C120,203,240,181,360,181C480,181,600,203,720,224C840,245,960,267,1080,261C1200,256,1320,224,1440,200L1440,320L0,320Z"></path></svg>
+    <div class="arc-wrapper">
+
+        <div class="arch-mask">
+
+            <div class="arc-track">
+                <img src="assets/heroproduct-1.png" class="arc-item pos1">
+                <img src="assets/heroproduct-2.png" class="arc-item pos2">
+                <img src="assets/heroproduct-3.png" class="arc-item pos3">
+                <img src="assets/heroproduct-2.png" class="arc-item pos4">
+                <img src="assets/heroproduct-5.png" class="arc-item pos5">
+            </div>
+
         </div>
 
+    </div>
+
+</div>
+        </section>
         <div class="unified-bg-wrapper">
             <section class="bestseller">
                 <div class="bestseller-container">

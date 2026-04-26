@@ -129,22 +129,42 @@
     transform: translateX(6px);
 }
 
-.secondary-btn {
-    padding: 14px 28px;
-    border-radius: 16px;
-    border: 2px solid rgba(0, 0, 0, 0.15);
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    font-size: 16px;
-    font-weight: 500;
-    color: #222;
-    cursor: pointer;
-    transition: all .3s ease;
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 20px;
+  border-radius: 25px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  background: transparent;
+  color: #b8962e;
+
+  border: 2px solid #d4af37;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* soft glow */
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
 }
 
-.secondary-btn:hover {
-    background: white;
-    transform: translateY(-2px);
+/* hover effect */
+.contact-btn:hover {
+  background: linear-gradient(135deg, #d4af37, #f5e6a8);
+  color: #000;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* icon styling */
+.contact-btn .icon {
+  font-size: 14px;
 }
 
 /* =========================================

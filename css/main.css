@@ -41,17 +41,28 @@ h1, h2, h3 {
 ========================================= */
 
 .hero {
-    min-height: 80vh;
-    background-size: 300% 300%;
-    animation: gradientMove 12s ease infinite;
+    min-height: 100vh;
+
+    /* 🔥 NEW BACKGROUND IMAGE */
+    background-image: url("../assets/hero-bg.png"); /* adjust path if needed */
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+
     display: flex;
     align-items: center;
+
     position: relative;
-    z-index: 2; /* Keeps hero above floating bg */
+    z-index: 2;
+    margin-top: -120px;
+    padding-top: 160px;
+
+    /* ❌ REMOVE OLD ANIMATION */
+    animation: none;
 }
 
 .hero-container {
-    max-width: 1200px;
+    max-width: 100%;
     position: relative;
     z-index: 3; /* Slightly higher than section base */
     margin: auto;
@@ -64,6 +75,7 @@ h1, h2, h3 {
 .hero-text {
     max-width: 520px;
     margin-top: -100px;
+    transform: translateX(-450px);
 }
 
 .hero-text h1 {
