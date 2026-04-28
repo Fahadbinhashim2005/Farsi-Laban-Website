@@ -15,17 +15,26 @@
 </head>
 
 <body>
-<svg style="width: 0; height: 0; position: absolute;" aria-hidden="true" focusable="false">
+<svg style="width:0;height:0;position:absolute;">
   <defs>
     <clipPath id="archClip" clipPathUnits="objectBoundingBox">
-      <path d="M 0.5,0.1
-               C 0.85,0.1 0.80,0.25 0.8,0.25 
-               C 0.95,0.3 0.95,0.45 0.95,0.5 
-               L 0.93,1
-               L 0.05,1 
-               L 0.05,0.5 
-               C 0.05,0.45 0.05,0.3 0.2,0.25 
-               C 0.3,0.2 0.45,0.1 0.5,0 Z" />
+      <path d="
+        M0.5,0.05
+
+        C0.60,0.05 0.68,0.10 0.70,0.18
+        C0.75,0.18 0.80,0.18 0.88,0.38
+        C0.99,0.45 0.99,0.50 0.99,0.55
+
+        L0.99,1
+        L0.05,1
+
+        L0.05,0.55
+        C0.05,0.50 0.05,0.42 0.10,0.38
+        C0.12,0.28 0.20,0.20 0.30,0.18
+        C0.32,0.10 0.40,0.05 0.5,0.05
+
+        Z
+      " />
     </clipPath>
   </defs>
 </svg>
@@ -109,21 +118,25 @@
                 </div>
                 <div class="arc-carousel">
 
-    <div class="arc-wrapper">
+  <div class="arc-wrapper">
 
-        <div class="arch-mask">
+    <!-- ✅ Arch Frame -->
+    <img src="assets/arch.png" class="arch-frame" alt="Arch">
 
-            <div class="arc-track">
-                <img src="assets/heroproduct-1.png" class="arc-item pos1">
-                <img src="assets/heroproduct-2.png" class="arc-item pos2">
-                <img src="assets/heroproduct-3.png" class="arc-item pos3">
-                <img src="assets/heroproduct-2.png" class="arc-item pos4">
-                <img src="assets/heroproduct-5.png" class="arc-item pos5">
-            </div>
+    <!-- ✅ Masked Area -->
+    <div class="arch-mask">
 
-        </div>
+      <div class="arc-track">
+        <img src="assets/heroproduct-1.png" class="arc-item pos1">
+        <img src="assets/heroproduct-2.png" class="arc-item pos2">
+        <img src="assets/heroproduct-3.png" class="arc-item pos3">
+        <img src="assets/heroproduct-2.png" class="arc-item pos4">
+        <img src="assets/heroproduct-5.png" class="arc-item pos5">
+      </div>
 
     </div>
+
+  </div>
 
 </div>
         </section>
