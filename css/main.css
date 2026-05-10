@@ -10,11 +10,33 @@
 
 body {
     font-family: "Outfit", sans-serif;
-    background: #f6fbff;
-    background: linear-gradient(120deg, #dff1ff, #9fd6ff, #cfeaff);
     color: #222;
-    padding-top: 120px;
     overflow-x: hidden;
+}
+.long-bg {
+    position: relative;
+    background: url("../assets/bg.png") no-repeat top center;
+    background-size: 100% auto;
+    margin-top: 0px;
+    padding-top: 40px;
+}
+.long-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(230,240,255,1) 0%,
+        rgba(230,240,255,0.7) 40%,
+        rgba(230,240,255,0) 100%
+    );
+
+    pointer-events: none;
+    z-index: 1;
 }
 
 body.loading {
@@ -23,8 +45,8 @@ body.loading {
 
 section {
     padding: 80px 10%;
-    position: relative; /* Necessary for z-index to take effect */
-    z-index: 2;         /* Standardized: Brings sections above the floating bg */
+    position: relative;
+    z-index: 2;
 }
 
 h1, h2, h3 {
@@ -36,36 +58,56 @@ h1, h2, h3 {
     margin: auto;
 }
 
+.hidden {
+    display: none;
+}
+.glass-section {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
+
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
 /* =========================================
    HERO SECTION
 ========================================= */
 
 .hero {
     min-height: 100vh;
-
-    /* 🔥 NEW BACKGROUND IMAGE */
-    background-image: url("../assets/hero-bg.png"); /* adjust path if needed */
-    background-size: cover; /* Ensures the image covers the entire area */
+    background-image: url("../assets/hero-bg.png");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    padding-top: 120px;
     display: flex;
     align-items: center;
-
     position: relative;
     z-index: 2;
-    margin-top: -120px;
     margin-right: 5px;
-    padding-top: 160px;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
 
-    /* ❌ REMOVE OLD ANIMATION */
-    animation: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0) 0%,
+        rgba(230,240,255,0.6) 50%,
+        rgba(230,240,255,1) 100%
+    );
+
+    pointer-events: none;
+    z-index: 2;
 }
 
 .hero-container {
     max-width: 100%;
     position: relative;
-    z-index: 3; /* Slightly higher than section base */
+    z-index: 3;
     margin: auto;
     display: flex;
     align-items: center;
@@ -100,10 +142,6 @@ h1, h2, h3 {
     margin-top: 25px;
 }
 
-/* =========================================
-   HERO TAG
-========================================= */
-
 .hero-tag {
     display: inline-flex;
     align-items: center;
@@ -126,6 +164,7 @@ h1, h2, h3 {
     background: #0b66ff;
     border-radius: 50%;
     display: inline-block;
+    z-index: 2;
 }
 
 .hero-tag:hover {
@@ -136,10 +175,6 @@ h1, h2, h3 {
 .hero-tag:hover::before {
     background: #22c55e;
 }
-
-/* =========================================
-   HERO STATS
-========================================= */
 
 .hero-stats {
     display: flex;
@@ -161,21 +196,6 @@ h1, h2, h3 {
     margin-top: 2px;
 }
 
-/* =========================================
-   UNIFIED GRADIENT TRANSITION
-========================================= */
-
-.unified-bg-wrapper {
-    position: relative;
-    z-index: 1;
-    /* Gradient spreads 50:50 over BOTH sections: starts White at Bestseller and ends Blue at Story */
-    background: linear-gradient(
-        180deg, 
-        #ffffff 0%, 
-        #cfeaff 50%, 
-        #9fd6ff 100% 
-    );
-}
 
 /* =========================================
    BEST SELLER SECTION
@@ -184,7 +204,7 @@ h1, h2, h3 {
 .bestseller {
     background: transparent !important;
     padding: 120px 10%;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .bestseller-container {
@@ -195,7 +215,7 @@ h1, h2, h3 {
     justify-content: space-between;
     position: relative;
     gap: 80px;
-    z-index: 3; 
+    z-index: 3;
 }
 
 #user-name {
@@ -215,8 +235,6 @@ h1, h2, h3 {
     line-height: 1.6;
 }
 
-/* ================= CARD ================= */
-
 .bestseller-card {
     width: 420px;
     background: white;
@@ -231,49 +249,21 @@ h1, h2, h3 {
     transform: translateY(-6px);
 }
 
-/* ================= IMAGE AREA ================= */
-
 .bestseller-image {
     background: #f5f7fb;
     border-radius: 20px;
     position: relative;
     margin-bottom: 20px;
     z-index: 2;
-
-    height: 220px;         /* 🔥 fixed height */
-    overflow: hidden;      /* 🔥 crop overflow */
-    padding: 0;            /* 🔥 removed extra padding */
+    height: 220px;
+    overflow: hidden;
 }
-
-/* IMAGE FIX */
 
 .bestseller-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;     /* 🔥 fills perfectly */
+    object-fit: cover;
     display: block;
-}
-
-/* BADGE */
-
-.badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #1e6ffb;
-    color: white;
-    padding: 6px 14px;
-    font-size: 12px;
-    border-radius: 20px;
-    z-index: 3;
-}
-
-/* ================= TEXT ================= */
-
-.rating {
-    color: #f59e0b;
-    font-size: 14px;
-    margin-bottom: 8px;
 }
 
 .bestseller-details h3 {
@@ -287,24 +277,18 @@ h1, h2, h3 {
     margin-bottom: 16px;
 }
 
-/* ================= BOTTOM ================= */
-
 .bestseller-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.price {
-    font-size: 28px;
-    font-weight: 700;
-}
 /* =========================================
-   OUR STORY
+   OUR STORY SECTION
 ========================================= */
 
 .story {
-    background: transparent !important; /* Removed individual bg to show unified gradient */
+    background: transparent !important;
     padding: 100px 10%;
     z-index: 2;
 }
@@ -312,10 +296,10 @@ h1, h2, h3 {
 .story-container {
     max-width: 1200px;
     margin: auto;
-    z-index: 3; 
+    z-index: 3;
 }
 
-.story-header {   
+.story-header {
     display: inline-flex;
     align-items: center;
     padding: 8px 15px;
@@ -409,8 +393,9 @@ h1, h2, h3 {
 .story-footer span {
     color: #0077ff;
 }
+
 /* =========================================
-   FULL HORIZONTAL RIBBON FOOTER
+   FOOTER
 ========================================= */
 
 .modern-footer {
@@ -424,30 +409,29 @@ h1, h2, h3 {
     left: 0;
     right: 0;
     height: 40px;
-    background-color: #f6fbff; /* Matches your body bg */
-    border-radius:  2.5rem 2.5rem 0 0;
+    background-color: #f6fbff;
+    border-radius: 2.5rem 2.5rem 0 0;
     z-index: 1;
 }
 
 .blue-layer-content {
     position: relative;
     margin-top: -32px;
-    background-color: #0099ff; /* Your brand blue */
+    background-color: #0099ff;
     padding-top: 25px;
     border-radius: 2.5rem 2.5rem 0 0;
     z-index: 2;
     color: #ffffff;
 }
 
-/* THE HORIZONTAL ROW */
 .footer-grid-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px 40px;
     display: flex;
-    flex-direction: row;      /* Force horizontal layout */
-    align-items: center;      /* Vertically center all items in the row */
-    justify-content: space-between; /* Space out Logo, Links, and Socials */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -456,12 +440,11 @@ h1, h2, h3 {
     height: auto;
 }
 
-/* HORIZONTAL NAVIGATION */
 .footer-list {
     list-style: none;
     display: flex;
-    flex-direction: row;      /* Force links to stay horizontal */
-    gap: 40px;                /* Consistent spacing between links */
+    flex-direction: row;
+    gap: 40px;
 }
 
 .footer-list a {
@@ -469,7 +452,7 @@ h1, h2, h3 {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    white-space: nowrap;      /* Prevent links from wrapping to a new line */
+    white-space: nowrap;
     transition: opacity 0.3s;
 }
 
@@ -477,7 +460,6 @@ h1, h2, h3 {
     opacity: 0.7;
 }
 
-/* HORIZONTAL SOCIALS */
 .footer-social-row {
     display: flex;
     flex-direction: row;
@@ -504,7 +486,6 @@ h1, h2, h3 {
     transform: translateY(-3px);
 }
 
-/* CENTERED COPYRIGHT BAR */
 .footer-copyright-bar {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding: 20px 0;
@@ -520,7 +501,6 @@ h1, h2, h3 {
     letter-spacing: 0.03em;
 }
 
-/* Mobile Fix: Stack only on very small screens */
 @media (max-width: 850px) {
     .footer-grid-container {
         flex-direction: column;
