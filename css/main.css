@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: "Outfit", sans-serif;
+    font-family: 'Outfit', sans-serif;
     color: #222;
     overflow-x: hidden;
 }
@@ -67,6 +67,40 @@ h1, h2, h3 {
 
     border: 1px solid rgba(255,255,255,0.4);
     box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* =========================================
+   FONTS
+========================================= */
+.hero-text h1,
+.story-title,
+.bestseller-text h2,
+.products-header h2,
+.customer-love-header h2,
+.stores-header h2,
+.special-title {
+    font-family:'Cormorant Garamond',serif;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+}
+.hero-text h1 span,
+.story-title span,
+.bestseller-text h2 span {
+    font-style: italic;
+    font-weight: 500;
+    color: #c89b3c;
+}
+.hero-text h1 {
+    font-size: 5.5rem;
+    line-height: 0.95;
+    font-weight: 600;
+    color: #111;
+}
+.hero-text h1 span {
+    display: block;
+    margin-top: 8px;
+    color: #0066ff;
 }
 /* =========================================
    HERO SECTION

@@ -29,54 +29,88 @@
 
 .navbar {
     position: fixed;
+    top: 4%;
     left: 50%;
-    top: 5%;
-    z-index: 10;
     transform: translateX(-50%);
-    background: transparent;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    padding: 12px 35px;
-    border-radius: 40px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    padding: 15px 42px;
+    border-radius: 60px;
+    background:rgba(255,255,255,0.32);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border:1px solid rgba(212,175,55,0.18);
+    box-shadow:0 10px 40px rgba(0,0,0,0.08),inset 0 1px 1px rgba(255,255,255,0.55);
+    transition:all 0.4s ease;
+    overflow: hidden;
 }
-
+.navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:linear-gradient(120deg,rgba(255,255,255,0.15),rgba(255,255,255,0.03));
+    pointer-events: none;
+}
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
     list-style: none;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-weight: 500;
-    font-size: 15px;
-    transition: 0.3s;
     position: relative;
+    text-decoration: none;
+    color: #1f1f1f;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #0077ff;
+    color: #0066ff;
+    transform: translateY(-2px);
 }
 
 .nav-links a::after {
     content: "";
     position: absolute;
-    bottom: -4px;
     left: 50%;
+    bottom: -8px;
     width: 0%;
-    height: 2px;
-    background: #0077ff;
-    transition: 0.3s;
+    height: 3px;
+    border-radius: 20px;
+    background:linear-gradient(to right,#c89b3c,#f4d77a,#c89b3c);
     transform: translateX(-50%);
+    transition: width 0.35s ease;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 75%;
 }
-
+.nav-links a.active {
+    color: #c89b3c;
+    text-shadow:0 0 12px rgba(212,175,55,0.18);
+}
+.nav-links a.active::after {
+    width: 75%;
+    background:linear-gradient(to right,#c89b3c,#f4d77a,#c89b3c);
+}
+.nav-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background:linear-gradient(135deg,#d4af37,#f6d978);
+    opacity: 0.75;
+    box-shadow:0 0 10px rgba(212,175,55,0.35);
+}
+.navbar.scrolled {
+    background:rgba(255,255,255,0.55);
+    backdrop-filter: blur(24px);
+    box-shadow:0 12px 40px rgba(0,0,0,0.12);
+    padding: 15px 38px;
+}
 /* =========================================
    SHARED BADGE & PRICE
 ========================================= */

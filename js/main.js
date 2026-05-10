@@ -84,7 +84,45 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
+// =====================================
+// NAVBAR SCROLL EFFECT
+// =====================================
 
+const navbar=document.querySelector(".navbar");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>20){
+        navbar.classList.add("scrolled");
+    }
+
+    else{
+        navbar.classList.remove("scrolled");
+    }
+
+});
+
+// =====================================
+// ACTIVE NAV LINK ON SCROLL
+// =====================================
+
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll(".nav-links a");
+window.addEventListener("scroll",()=>{
+    let current="";
+    sections.forEach(section=>{
+        const sectionTop=section.offsetTop;
+        if(window.scrollY>=sectionTop-200){
+            current=section.getAttribute("id");
+        }
+    });
+    navLinks.forEach(link=>{
+        link.classList.remove("active");
+        if(link.getAttribute("href")===`#${current}`){
+            link.classList.add("active");
+        }
+    });
+});
 /* ========================================
 MAKE FUNCTIONS GLOBAL (IMPORTANT)
 ======================================== */
