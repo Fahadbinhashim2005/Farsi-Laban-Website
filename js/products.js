@@ -8,35 +8,35 @@ export function loadProducts() {
 
 const products = [
         // SALANKATIA
-        { id: 1, category: "salankatia", name: "Lotus Biscoff Salankatia", price: 350, image: "assets/products/lotussalankatia.png", description: "A caramelized biscoff dream <br> blended into a silky dessert", badge: "Best Seller" },
-        { id: 2, category: "salankatia", name: "Pistachio Salankatia", price: 350, image: "assets/products/pistachiosalankatia.png", description: "Rich, creamy dessert infused with <br> premium pistachio flavor" },
-        { id: 3, category: "salankatia", name: "Nutella Salankatia", price: 350, image: "assets/products/nutellasalankatia.png", description: "Smooth and indulgent chocolate <br> delight made with Nutella" },
-        { id: 4, category: "salankatia", name: "Lotus + Pistachio Salankatia", price: 350, image: "assets/products/lotuspistachiosalankatia.png", description: "A blend of caramelized Lotus <br> and smooth pistachio richness", badge: "Best Seller" },
-        { id: 5, category: "salankatia", name: "Nutella + Pistachio Salankatia", price: 350, image: "assets/products/nutellapistachiosalankatia.png", description: "A perfect half-and-half fusion of <br> rich Nutella and creamy pistachio" },
-        { id: 6, category: "salankatia", name: "Nutella + Lotus Salankatia", price: 350, image: "assets/products/nutellalotussalankatia.png", description: "Double indulgence with rich Nutella <br> chocolate and sweet Lotus spread" },
+        { id: 1, category: "salankatia", name: "Lotus Biscoff Salankatia", price: 350, image: "assets/products/lotussalankatia.png", description: "A caramelized biscoff dream blended into a silky dessert", badge: "Best Seller" },
+        { id: 2, category: "salankatia", name: "Pistachio Salankatia", price: 350, image: "assets/products/pistachiosalankatia.png", description: "Rich, creamy dessert infused with premium pistachio flavor" },
+        { id: 3, category: "salankatia", name: "Nutella Salankatia", price: 350, image: "assets/products/nutellasalankatia.png", description: "Smooth and indulgent chocolate delight made with Nutella" },
+        { id: 4, category: "salankatia", name: "Lotus + Pistachio Salankatia", price: 350, image: "assets/products/lotuspistachiosalankatia.png", description: "A blend of caramelized Lotus and smooth pistachio richness", badge: "Best Seller" },
+        { id: 5, category: "salankatia", name: "Nutella + Pistachio Salankatia", price: 350, image: "assets/products/nutellapistachiosalankatia.png", description: "A perfect half-and-half fusion of  rich Nutella and creamy pistachio" },
+        { id: 6, category: "salankatia", name: "Nutella + Lotus Salankatia", price: 350, image: "assets/products/nutellalotussalankatia.png", description: "Double indulgence with rich Nutella  chocolate and sweet Lotus spread" },
 
         // LOU'A
-        { id: 7, category: "loua", name: "Lotus Biscoff Lou'a", price: 350, image: "assets/products/lotuslou'a.png", description: "A caramelized biscoff dream <br> blended into a silky dessert", badge: "Best Seller" },
-        { id: 8, category: "loua", name: "Nutella Lou'a", price: 350, image: "assets/products/nutellalou'a.png", description: "Smooth and indulgent chocolate <br> delight made with Nutella" },
-        { id: 9, category: "loua", name: "Pistachio Lou'a", price: 350, image: "assets/products/pistachiolou'a.png", description: "Rich, creamy dessert infused with <br> premium pistachio flavor" },
-        { id: 10, category: "loua", name: "Lotus + Pistachio Lou'a", price: 350, image: "assets/products/lotuspistachiolou'a.png", description: "A blend of caramelized Lotus <br> and smooth pistachio richness" },
-        { id: 11, category: "loua", name: "Nutella + Pistachio Lou'a", price: 350, image: "assets/products/nutellapistachiolou'a.png", description: "A perfect half-and-half fusion of <br> rich Nutella and creamy pistachio" },
-        { id: 12, category: "loua", name: "Nutella + Lotus Lou'a", price: 350, image: "assets/products/nutellalotuslou'a.png", description: "Double indulgence with rich Nutella <br> chocolate and sweet Lotus spread" },
+        { id: 7, category: "loua", name: "Lotus Biscoff Lou'a", price: 350, image: "assets/products/lotuslou'a.png", description: "A caramelized biscoff dream blended into a silky dessert", badge: "Best Seller" },
+        { id: 8, category: "loua", name: "Nutella Lou'a", price: 350, image: "assets/products/nutellalou'a.png", description: "Smooth and indulgent chocolate delight made with Nutella" },
+        { id: 9, category: "loua", name: "Pistachio Lou'a", price: 350, image: "assets/products/pistachiolou'a.png", description: "Rich, creamy dessert infused with premium pistachio flavor" },
+        { id: 10, category: "loua", name: "Lotus + Pistachio Lou'a", price: 350, image: "assets/products/lotuspistachiolou'a.png", description: "A blend of caramelized Lotus and smooth pistachio richness" },
+        { id: 11, category: "loua", name: "Nutella + Pistachio Lou'a", price: 350, image: "assets/products/nutellapistachiolou'a.png", description: "A perfect half-and-half fusion of rich Nutella and creamy pistachio" },
+        { id: 12, category: "loua", name: "Nutella + Lotus Lou'a", price: 350, image: "assets/products/nutellalotuslou'a.png", description: "Double indulgence with rich Nutella chocolate and sweet Lotus spread" },
 
         // KOUSHRI
-        { id: 13, category: "koushri", name: "Lotus Biscoff Koushri", price: 350, image: "assets/products/lotuskoushri.png", description: "A caramelized biscoff dream <br> blended into a silky dessert", badge: "Best Seller" },
-        { id: 14, category: "koushri", name: "Nutella Koushri", price: 350, image: "assets/products/nutellakoushri.png", description: "Smooth and indulgent chocolate <br> delight made with Nutella" },
-        { id: 15, category: "koushri", name: "Pistachio Koushri", price: 350, image: "assets/products/pistachiokoushri.png", description: "Rich, creamy dessert infused with <br> premium pistachio flavor" },
-        { id: 16, category: "koushri", name: "Lotus + Pistachio Koushri", price: 350, image: "assets/products/lotuspistachiokoushri.png", description: "A blend of caramelized Lotus <br> and smooth pistachio richness" },
-        { id: 17, category: "koushri", name: "Nutella + Pistachio Koushri", price: 350, image: "assets/products/nutellapistachioskoushri.png", description: "A perfect half-and-half fusion of <br> rich Nutella and creamy pistachio" },
-        { id: 18, category: "koushri", name: "Nutella + Lotus Koushri", price: 350, image: "assets/products/nutellalotuskoushri.png", description: "Double indulgence with rich Nutella <br> chocolate and sweet Lotus spread" }
+        { id: 13, category: "koushri", name: "Lotus Biscoff Koushri", price: 350, image: "assets/products/lotuskoushri.png", description: "A caramelized biscoff dream blended into a silky dessert", badge: "Best Seller" },
+        { id: 14, category: "koushri", name: "Nutella Koushri", price: 350, image: "assets/products/nutellakoushri.png", description: "Smooth and indulgent chocolate delight made with Nutella" },
+        { id: 15, category: "koushri", name: "Pistachio Koushri", price: 350, image: "assets/products/pistachiokoushri.png", description: "Rich, creamy dessert infused with premium pistachio flavor" },
+        { id: 16, category: "koushri", name: "Lotus + Pistachio Koushri", price: 350, image: "assets/products/lotuspistachiokoushri.png", description: "A blend of caramelized Lotus and smooth pistachio richness" },
+        { id: 17, category: "koushri", name: "Nutella + Pistachio Koushri", price: 350, image: "assets/products/nutellapistachioskoushri.png", description: "A perfect half-and-half fusion of rich Nutella and creamy pistachio" },
+        { id: 18, category: "koushri", name: "Nutella + Lotus Koushri", price: 350, image: "assets/products/nutellalotuskoushri.png", description: "Double indulgence with rich Nutella chocolate and sweet Lotus spread" }
     ];
     const specials = [
-    { name: "Heba Cake", price: 350, image: "assets/products/hebacake.png", description: "Soft chocolate layers with creamy<br>texture, pistachio crumbs and drizzle<br>Perfectly balanced dessert" },
-    { name: "Fazea Choco Cake", price: 490, image: "assets/products/fazeachocolacake.png", description: "Rich chocolate cake with smooth<br>ganache and crunchy hazelnuts<br>Deep cocoa indulgence" },
-    { name: "DE Paris", price: 490, image: "assets/products/deparis.png", description: "Creamy layered dessert with rich<br>mango, strawberry and mulberry<br>Refreshing luxury treat" },
-    { name: "Kabsa", price: 350, image: "assets/products/kabsa.png", description: "Chocolate loaded dessert with soft<br>cake bites and choco chunks<br>Crunchy and rich in every bite" },
-    { name: "Cheese Bomb", price: 290, image: "assets/products/cheesebomb.png", description: "Crispy kunafa filled with melted<br>cheese and rich chocolate drizzle<br>Warm and gooey delight" }
+    { name: "Heba Cake", price: 350, image: "assets/products/hebacake.png", description: "Soft chocolate layers with creamy texture, pistachio crumbs and drizzle Perfectly balanced dessert" },
+    { name: "Fazea Choco Cake", price: 490, image: "assets/products/fazeachocolacake.png", description: "Rich chocolate cake with smooth ganache and crunchy hazelnuts Deep cocoa indulgence" },
+    { name: "DE Paris", price: 490, image: "assets/products/deparis.png", description: "Creamy layered dessert with rich mango, strawberry and mulberry Refreshing luxury treat" },
+    { name: "Kabsa", price: 350, image: "assets/products/kabsa.png", description: "Chocolate loaded dessert with soft cake bites and choco chunks Crunchy and rich in every bite" },
+    { name: "Cheese Bomb", price: 290, image: "assets/products/cheesebomb.png", description: "Crispy kunafa filled with melted cheese and rich chocolate drizzle Warm and gooey delight" }
 ];
     const grid = document.getElementById("product-grid");
     const specialGrid = document.getElementById("special-grid");

@@ -602,12 +602,16 @@ h1, h2, h3 {
         justify-content: center;
         width: 100%;
     }
-
     .story-image img {
-        max-width: 100%;
-        border-radius: 24px;
+        width: 100%;
+        max-width: 520px;
+        border-radius: 32px;
+        box-shadow: 0 25px 50px rgba(0,0,0,.12);
+        transition: transform .4s ease;
     }
-
+    .story-image img:hover {
+        transform: translateY(-5px);
+    }
     .story-text {
         max-width: 100%;
         text-align: center;
@@ -646,4 +650,134 @@ h1, h2, h3 {
     .stat-card {
         min-width: 110px;
     }
+}
+
+@media (max-width: 768px) {
+
+    .bestseller {
+        padding: 70px 20px;
+    }
+
+    .bestseller-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .bestseller-text {
+        width: 100%;
+    }
+
+    .bestseller-text h2 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .bestseller-desc {
+        max-width: 100%;
+        margin: 0 auto 25px;
+    }
+
+    .bestseller-card {
+        width: 100%;
+        max-width: 420px;
+    }
+}
+@media (max-width: 480px) {
+
+    .bestseller-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .bestseller-details h3 {
+        font-size: 1.4rem;
+    }
+
+    .bestseller-image {
+        height: 200px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 240px;
+    }
+}
+.mobile-scroll-hint{
+    display:none;
+}
+
+@media (max-width:768px){
+
+    .mobile-scroll-hint{
+        display:block;
+        text-align:center;
+        color:#777;
+        font-size:.85rem;
+        margin-bottom:15px;
+    }
+
+}
+@media (max-width:768px){
+
+    .product-card{
+        min-width:260px;
+    }
+
+}
+@media (max-width:768px){
+
+    .products-header h2{
+        font-size:2rem;
+    }
+
+}
+@media (max-width:768px){
+
+    .products{
+        padding:70px 20px;
+    }
+
+}
+@media (max-width:768px){
+
+    #special-grid .product-card{
+
+        flex: 0 0 90%;
+        min-width: 90%;
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 16px;
+    }
+
+    #special-grid .product-image{
+
+        width: 100%;
+        height: 220px;
+
+        flex: unset;
+    }
+
+    #special-grid .product-image img{
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    #special-grid .product-info-column{
+
+        width: 100%;
+    }
+
+}
+@media (max-width:768px){
+
+    .special-title + .mobile-scroll-hint{
+        display:none;
+    }
+
 }
