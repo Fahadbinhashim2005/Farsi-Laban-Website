@@ -534,11 +534,55 @@ h1, h2, h3 {
     color: rgba(255, 255, 255, 0.5);
     letter-spacing: 0.03em;
 }
+.social-btn i {
+    font-size: 1.1rem;
+}
+.social-btn {
+    backdrop-filter: blur(10px);
+}
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
+
     .footer-grid-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        gap: 30px;
+        gap: 25px;
+        padding: 0 20px 30px;
     }
+
+    .footer-list {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .footer-social-row {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        width: 65px;
+    }
+
+    .copyright-inner {
+        font-size: 0.75rem;
+        padding: 0 20px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE SYSTEM
+========================================== */
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
 }
