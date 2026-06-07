@@ -586,3 +586,64 @@ h1, h2, h3 {
 @media (max-width: 480px) {
 
 }
+
+@media (max-width: 768px) {
+
+    .story {
+        padding: 60px 20px;
+    }
+
+    .story-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .story-image {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .story-image img {
+        max-width: 100%;
+        border-radius: 24px;
+    }
+
+    .story-text {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .story-text p {
+        text-align: center;
+    }
+
+    .story-footer {
+        text-align: center;
+    }
+    .story-stats {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .story-title {
+        font-size: 2rem;
+    }
+    .story-footer p {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 480px) {
+
+    .story-title {
+        font-size: 1.7rem;
+    }
+
+    .story-footer p {
+        font-size: 1.6rem;
+    }
+
+    .stat-card {
+        min-width: 110px;
+    }
+}
