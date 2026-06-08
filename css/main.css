@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+html,
+body{
+ overflow-x:hidden;
+}
+
 body {
     font-family: 'Outfit', sans-serif;
     color: #222;
@@ -739,45 +744,266 @@ h1, h2, h3 {
 
 }
 @media (max-width:768px){
-
     #special-grid .product-card{
-
         flex: 0 0 90%;
         min-width: 90%;
-
         flex-direction: column;
-
         height: auto;
-
         padding: 16px;
     }
-
     #special-grid .product-image{
-
         width: 100%;
         height: 220px;
-
         flex: unset;
     }
-
     #special-grid .product-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #special-grid .product-info-column{
+        width: 100%;
+    }
+}
+@media (max-width:768px){
+    .special-title + .mobile-scroll-hint{
+        display:none;
+    }
+}
+/* =========================================
+   CUSTOMER LOVE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .customer-love {
+        padding: 70px 20px;
+    }
+
+    .customer-love-header {
+        margin-bottom: 24px;
+    }
+
+    .customer-love-header h2 {
+        font-size: 2rem;
+    }
+
+    .customer-love-grid {
+
+        margin-top: 30px;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-auto-rows: minmax(40px, auto);
+
+        gap: 12px;
+    }
+
+    /* Hide second reel */
+
+    .card-e {
+        display: none;
+    }
+
+    /* Reset desktop spans */
+
+    .card.large,
+    .reel-card {
+
+        grid-column: auto;
+        grid-row: auto;
+
+        min-width: 0;
+    }
+
+    /* ======================
+       MAIN IMAGE (B)
+    ====================== */
+
+    .card-b {
+        grid-column: 1 / -1 !important;
+        order: -1;
+        grid-column: span 2;
+        grid-row: span 2;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .card-b img {
 
         width: 100%;
         height: 100%;
 
         object-fit: cover;
+
+        display: block;
     }
 
-    #special-grid .product-info-column{
+    /* ======================
+       INFO CARDS (A & C)
+    ====================== */
+
+    .card-a,
+    .card-c {
+
+        grid-column: span 2;
+        grid-row: span 2;
+
+        min-height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 18px;
+    }
+    .card-a{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .card-c{
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    /* ======================
+       REEL CARD (D)
+    ====================== */
+
+    .card-d {
+        grid-column: span 2;
+        grid-row: span 2;
+        padding: 0;
+        overflow: hidden;
+        min-height: 240px;
+    }
+    .card-d{
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+
+    .card-d video {
 
         width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
     }
 
+    /* ======================
+       BOTTOM BENTO
+    ====================== */
+
+    .card-f,
+    .card-h,
+    .card-g,
+    .card-i {
+
+        grid-column: span 1;
+        grid-row: span 1;
+
+        min-height: 130px;
+
+        padding: 18px;
+    }
+
+    /* ======================
+       TYPOGRAPHY
+    ====================== */
+
+    .card h3 {
+
+        font-size: 0.95rem;
+
+        line-height: 1.3;
+
+        margin-bottom: 8px;
+    }
+
+    .card p {
+
+        font-size: 0.78rem;
+
+        line-height: 1.5;
+
+        margin: 0;
+    }
+
+    .review .stars {
+
+        font-size: 1rem;
+
+        margin-bottom: 8px;
+    }
+
+    .review span {
+
+        font-size: 0.75rem;
+    }
+
+    /* ======================
+       CTA BUTTON
+    ====================== */
+
+    .instagram-btn {
+
+        margin-top: 24px;
+
+        width: 100%;
+
+        max-width: 260px;
+    }
 }
-@media (max-width:768px){
 
-    .special-title + .mobile-scroll-hint{
-        display:none;
+/* =========================================
+   EXTRA SMALL DEVICES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .customer-love {
+        padding: 60px 16px;
     }
 
+    .customer-love-grid {
+
+        gap: 10px;
+
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .card-b {
+
+        grid-row: span 2;
+    }
+
+    .card-d {
+
+        min-height: 220px;
+    }
+
+    .card-a,
+    .card-c,
+    .card-f,
+    .card-h,
+    .card-g,
+    .card-i {
+
+        min-height: 110px;
+
+        padding: 14px;
+    }
+
+    .card h3 {
+
+        font-size: 0.85rem;
+    }
+
+    .card p {
+
+        font-size: 0.72rem;
+    }
 }
